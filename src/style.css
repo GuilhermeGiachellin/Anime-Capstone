@@ -12,5 +12,10 @@ footer {
 
 .container {
   height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  background-color: #e4e4e4;
 }
 
