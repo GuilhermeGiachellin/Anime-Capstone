@@ -4,9 +4,9 @@ export default class request {
     const response = await fetch(url);
     const res = await response.json();
     return res;
-    }
+  }
 
-  async post(url, data){
+  async post(url, data) {
     const response = await fetch(url, {
         method: 'POST',
         headers: {

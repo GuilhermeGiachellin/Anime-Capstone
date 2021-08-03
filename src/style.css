@@ -53,6 +53,17 @@ button {
 
 .like i {
   font-size: 1.5em;
-  color: #bdbdbd;
 
+}
+
+.not_liked {
+  color: #bdbdbd;
+}
+
+.liked {
+  color: rgb(243, 71, 71);
+}
+
+.num_like {
+  text-align: center;
 }
