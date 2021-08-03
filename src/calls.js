@@ -3,6 +3,7 @@ import displayAnime from './displayAnime.js';
 import displayLikes from './displayLikes.js';
 import saveLike from './saveLike.js';
 import countAnime from './countAnime.js';
+import popUpAnime from './popUp';
 
 export const newSession = new request();
 
@@ -11,6 +12,11 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
 .then(data => {
   displayAnime(data);
   countAnime(data);
+
+  const btns = document.querySelectorAll('button');
+  btns.forEach(btn => {
+    btn.addEventListener('click', popUpAnime);
+  })
   
 })
 .catch(err => err);

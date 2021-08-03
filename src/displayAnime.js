@@ -1,13 +1,16 @@
 import countAnime from "./countAnime.js";
+import popUpEvent from './listener';
+import popUpAnime from "./popUp.js";
 
 export default function displayAnime(data) {
-  let totalAnime = countAnime(data);
-  let container = document.querySelector('.container');
-  let domAnime = document.createElement('div');
+  const totalAnime = countAnime(data);
+  const container = document.querySelector('.container');
+  const domAnime = document.createElement('div');
   let numberAnime = document.createElement('h3');
   numberAnime.innerText = totalAnime;
   domAnime.classList.add('domAnime');
   let apiAnime = data.anime;
+
   for(let i = 0; i < 9 ; i++){
     let item = document.createElement('div');
     let button = document.createElement('button');
@@ -17,6 +20,7 @@ export default function displayAnime(data) {
 
     like.classList.add('like');
     interaction.classList.add('interaction');
+    interaction.id = i;
     title.classList.add('anime-title');
     item.classList.add('item');
 
@@ -33,4 +37,5 @@ export default function displayAnime(data) {
     container.appendChild(numberAnime);
     container.appendChild(domAnime);
   }
+
 }
