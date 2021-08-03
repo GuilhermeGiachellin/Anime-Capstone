@@ -1,9 +1,13 @@
+import { text } from "body-parser";
+
 export default function displayAnime(data) {
+  let totalAnime = data.anime.length;
   let container = document.querySelector('.container');
   let domAnime = document.createElement('div');
+  let numberAnime = document.createElement('h3');
+  numberAnime.innerText = totalAnime;
   domAnime.classList.add('domAnime');
   let apiAnime = data.anime;
-
   for(let i = 0; i < 9 ; i++){
     let item = document.createElement('div');
     let button = document.createElement('button');
@@ -26,6 +30,7 @@ export default function displayAnime(data) {
     item.appendChild(title);
     item.appendChild(interaction);
     domAnime.appendChild(item);
+    container.appendChild(numberAnime);
     container.appendChild(domAnime);
   }
 }
