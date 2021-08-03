@@ -1,7 +1,6 @@
 export default function displayLikes(response) {
   const items = document.querySelectorAll('.item');
   response.forEach(res => {
-    console.log(res)
     items.forEach( item => {
       if(item.firstChild.nextSibling.innerHTML === res.item_id){
         const i = item.firstChild.nextSibling.nextSibling.firstChild.nextSibling.firstChild;

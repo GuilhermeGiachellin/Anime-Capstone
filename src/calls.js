@@ -2,6 +2,7 @@ import request from './requests';
 import displayAnime from './displayAnime.js';
 import displayLikes from './displayLikes.js';
 import saveLike from './saveLike.js';
+import countAnime from './countAnime.js';
 
 export const newSession = new request();
 
@@ -9,6 +10,7 @@ export const newSession = new request();
 newSession.get('https://api.jikan.moe/v3/season/2021/summer')
 .then(data => {
   displayAnime(data);
+  countAnime(data);
   
 })
 .catch(err => err);

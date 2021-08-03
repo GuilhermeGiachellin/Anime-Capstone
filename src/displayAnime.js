@@ -1,7 +1,7 @@
-import { text } from "body-parser";
+import countAnime from "./countAnime.js";
 
 export default function displayAnime(data) {
-  let totalAnime = data.anime.length;
+  let totalAnime = countAnime(data);
   let container = document.querySelector('.container');
   let domAnime = document.createElement('div');
   let numberAnime = document.createElement('h3');
