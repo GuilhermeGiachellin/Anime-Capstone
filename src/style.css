@@ -56,3 +56,65 @@ button {
   color: #bdbdbd;
 
 }
+
+.popup {
+  position: fixed;
+  z-index: 99;
+  margin: 5vh 32.5vw;
+  width: 35vw;
+}
+
+.popup_container {  
+  display: flex;
+  position: relative;
+  top: 0;  
+  align-items: center;  
+  flex-direction: column;
+  height: 90vh;
+  width: 35vw;
+  background-color: #272a31;
+  color: white;
+  border-radius: 8px;
+}
+
+.popup_container > img {
+  width: 18vw;  
+  margin-top: 5vh;
+}
+
+h4 {
+  font-size: 1.7em;
+  width: 30vw;
+  margin: 2.5vh auto;
+  text-align: center;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25vw;
+  margin: 0 auto;
+}
+
+ul li{
+  list-style: none; 
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 20px;
+  width: 15vw;
+}
+
+input,
+textarea {
+  width: 15vw;
+}
+
+.fas {
+  position: absolute;  
+  top: 20px;
+  right: 20px;
+}

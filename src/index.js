@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import './style.css';
 import request from './requests';
+import popUpEvent from './listener';
 
 const newSession = new request();
 
@@ -12,18 +13,21 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
   let domAnime = document.createElement('div');
   domAnime.classList.add('domAnime');
   let apiAnime = data.anime;
+  let index = 0;  
 
   for(let i = 0; i < 9 ; i++){
     let item = document.createElement('div');
     let button = document.createElement('button');
     let like = document.createElement('div');
     let interaction = document.createElement('div');
-    let title = document.createElement('h5');
+    let title = document.createElement('h5');    
 
     like.classList.add('like');
     interaction.classList.add('interaction');
+    interaction.id = index;
     title.classList.add('anime-title');
     item.classList.add('item');
+    button.id = `btn`;
 
     like.innerHTML = `<i class="fas fa-heart"></i>`;
     button.innerHTML = `Comment`;
@@ -36,6 +40,9 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
     item.appendChild(interaction);
     domAnime.appendChild(item);
     container.appendChild(domAnime);
+    index += 1;
   }
+  popUpEvent()
+
 })
-.catch(err => console.log(err));
+.catch(err => err);
