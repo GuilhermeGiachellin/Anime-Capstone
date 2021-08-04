@@ -4,13 +4,127 @@
   box-sizing: border-box;
 }
 
-header,
+/* header,
 footer {
   background-color: rgb(209, 208, 206);
   height: 10vh;
+} */
+
+button {
+  margin-top: 15px;
+  margin-right: 30px;
+  padding: 10px 10px;
+  flex-basis: 0;
 }
 
 .container {
-  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  background-color: #e4e4e4;
+  justify-content: space-around;
 }
 
+.domAnime {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item {
+  margin: 20px 60px;
+}
+
+.anime-title {
+  width: 230px;
+}
+
+.interaction {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.like {
+  padding-top: 15px;
+  flex-basis: 0;
+}
+
+.like i {
+  font-size: 1.5em;
+}
+
+.not_liked {
+  color: #bdbdbd;
+}
+
+.liked {
+  color: rgb(243, 71, 71);
+}
+
+.num_like {
+  text-align: center;
+}
+
+.popup {
+  position: fixed;
+  z-index: 99;
+  margin: 5vh 32.5vw;
+  width: 35vw;
+}
+
+.popup_container {
+  display: flex;
+  position: relative;
+  top: 0;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 35vw;
+  background-color: #272a31;
+  color: white;
+  border-radius: 8px;
+}
+
+.popup_container > img {
+  width: 18vw;
+  margin-top: 5vh;
+}
+
+h4 {
+  font-size: 1.7em;
+  width: 30vw;
+  margin: 2.5vh auto;
+  text-align: center;
+}
+
+.info_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 25vw;
+  margin: 0 auto;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+form {
+  margin-top: 20px;
+  width: 15vw;
+}
+
+input,
+textarea {
+  width: 15vw;
+}
+
+#close_popup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
