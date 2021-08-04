@@ -13,7 +13,7 @@ export default class Request {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
-        Accept: 'application/json',
+        'Accept': 'application/json',
       },
       body: JSON.stringify(data),
     });
