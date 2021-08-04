@@ -4,9 +4,7 @@ import popUpAnime from './popUp.js';
 export default class eventsPopUp {
   static popUpEvent() {
     const btn = document.querySelectorAll('button');
-    console.log(btn);
     btn.forEach((e) => {
-      console.log(e);
       e.addEventListener('click', () => {
         popUpAnime(e.parentNode.id);
       });
