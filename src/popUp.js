@@ -24,7 +24,7 @@ export default function popUpAnime(index) {
     <li>Genres: ${apiAnime[index].genres[0].name}, ${apiAnime[index].genres[1].name}</li>
     </ul>    
     </div>
-    <p>Comments airuhqiuhruqi</p>
+    <div class="comments_container"><p>Comments airuhqiuhruqi</p></div>
     <form>
     <h5>Add a comment</h5>
     <input type="text" placeholder="Name" id="name" required>

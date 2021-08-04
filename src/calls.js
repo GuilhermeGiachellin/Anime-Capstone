@@ -35,8 +35,12 @@ newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneA
 .catch(err => err);
 
 //GET FUNCIONANDO
-newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments')
+// for(let i = 0; i < 9; i += 1){
+// index = 0;
+newSession.get(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments?item_id=1`)
 .then(response => {
+  console.log('RESPOSTA')
   console.log(response)
 })
 .catch(err => err);
+// }
