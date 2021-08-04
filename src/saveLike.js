@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import { newSession } from './calls.js';
 
 export default function saveLike(e) {

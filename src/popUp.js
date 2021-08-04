@@ -1,8 +1,10 @@
+/* eslint-disable import/no-cycle */
 import eventsPopUp from './listener.js';
+import showComments from './showComments.js';
 import { newSession } from './calls.js';
 
 export default function popUpAnime(e) {
-  let index = e.target.parentNode.id;
+  const index = e.target.parentNode.id;
   newSession.get('https://api.jikan.moe/v3/season/2021/summer')
     .then((data) => {
       const apiAnime = data.anime;
@@ -23,7 +25,7 @@ export default function popUpAnime(e) {
     <li>Genres: ${apiAnime[index].genres[0].name}, ${apiAnime[index].genres[1].name}</li>
     </ul>    
     </div>
-    <h4 class="comment_title">Comments: </h4>
+    <h4 class="comment_title">Comments (): </h4>
     <div class="comments_container"></div>
     <h4 class="comment_title">Add a comment:</h4>
     <form>    

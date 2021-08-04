@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import countAnime from './countAnime.js';
 import popUpEvent from './listener';
 
@@ -10,7 +11,7 @@ export default function displayAnime(data) {
   domAnime.classList.add('domAnime');
   const apiAnime = data.anime;
 
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 9; i += 1) {
     const item = document.createElement('div');
     const button = document.createElement('button');
     const like = document.createElement('div');
