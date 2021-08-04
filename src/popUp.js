@@ -1,12 +1,13 @@
-import request from './requests';
-import eventsPopUp from './listener';
+/* eslint-disable import/no-cycle */
+import Request from './requests.js';
+import eventsPopUp from './listener.js';
 
-const popUp = new request();
+const popUp = new Request();
 
 export default function popUpAnime(index) {
   popUp.get('https://api.jikan.moe/v3/season/2021/summer')
     .then((data) => {
-      const apiAnime = data.anime;      
+      const apiAnime = data.anime;
       const body = document.querySelector('.popup');
       const container = document.createElement('div');
       container.classList.add('popup_container');
