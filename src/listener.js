@@ -4,7 +4,7 @@ import { newSession } from "./calls.js";
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments'
 
 export default class eventsPopUp {
-  // Open PopUp window 
+  // Open PopUp window
   static popUpEvent() {
   const btns = document.querySelectorAll('button');
   btns.forEach( btn => {
@@ -13,12 +13,13 @@ export default class eventsPopUp {
 }
   // Close PopUp window
   static closePopUp() {
-    const btn = document.getElementById('close_popup'); 
+    const btn = document.getElementById('close_popup');
     btn.addEventListener('click', () => {
         btn.parentNode.parentNode.innerHTML = '';
     });
   }
-  //Form listner
+
+  // Form listner
   static addComment(index) {
       const form = document.querySelector('form');      
       form.addEventListener('submit', (e) => {

@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* header,
@@ -16,6 +17,7 @@ button {
   padding: 10px 10px;
   flex-basis: 1;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +41,7 @@ button {
   width: 230px;
 }
 
-.interaction{
+.interaction {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -48,12 +50,10 @@ button {
 .like {
   padding-top: 15px;
   flex-basis: 1;
-
 }
 
 .like i {
   font-size: 1.5em;
-
 }
 
 .not_liked {
@@ -73,23 +73,25 @@ button {
   z-index: 99;
   margin: 5vh 32.5vw;
   width: 35vw;
+  background-color: #272a31;
 }
 
-.popup_container {  
+.popup_container {
   display: flex;
   position: relative;
-  top: 0;  
-  align-items: center;  
+  top: 0;
+  align-items: center;
   flex-direction: column;
   height: 90vh;
   width: 35vw;
   background-color: #272a31;
   color: white;
   border-radius: 8px;
+  overflow-y: scroll;
 }
 
 .popup_container > img {
-  width: 18vw;  
+  width: 18vw;
   margin-top: 5vh;
 }
 
@@ -108,24 +110,56 @@ h4 {
   margin: 0 auto;
 }
 
-ul li{
-  list-style: none; 
+ul li {
+  list-style: none;
   font-size: 1.1rem;
   margin-top: 10px;
 }
 
 form {
-  margin-top: 20px;
-  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 20vw;
 }
 
 input,
 textarea {
   width: 15vw;
+  height: 2.5vh;
+  margin: 10px auto;
+}
+
+textarea:focus {
+  width: 20vw;
+  height: 10vh;
 }
 
 #close_popup {
-  position: absolute;  
+  position: absolute;
   top: 20px;
   right: 20px;
+}
+
+.comment_title {
+  font-size: 1.2rem;
+}
+
+.comments_container {
+  width: 20vw;
+  margin: 20px auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

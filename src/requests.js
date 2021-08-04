@@ -15,23 +15,22 @@ export default class request {
         body: JSON.stringify( data )          
       });
     const res = await response.json();
-    console.log(res)
+    console.log(res);
     return res;
   }
 
-  async postComments(data) {
-    const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments', {
-        method: 'POST',        
-        headers: {
-          'Content-type': 'application/json',          
-          'Access-Control-Allow-Origin': '*'
-        },        
-        body: JSON.stringify( data )          
-      });
-    const res = await response.json();
-    console.log(res)
-    return res;
-  }
+  // async postComments(data) {
+  //   const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-type': 'application/json',
+  //       'Access-Control-Allow-Origin': '*',
+  //     },
+  //     body: JSON.stringify(data),
+  //   });
+  //   const res = await response;    
+  //   return res;
+  // }
 
   async postComment(url, data) {
     const response = await fetch(url, {

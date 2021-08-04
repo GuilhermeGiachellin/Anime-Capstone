@@ -19,8 +19,8 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
 
 // Call Involvement API to display Likes
 newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/likes')
-.then(response => {
-  displayLikes(response);
+  .then((response) => {
+    displayLikes(response);
 
   eventsPopUp.popUpEvent();
   const i =  document.querySelectorAll('i');
