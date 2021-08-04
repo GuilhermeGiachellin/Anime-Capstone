@@ -5,14 +5,18 @@ export default class request {
     return res;
   }
 
-  async post(url, data) {
+  async post(url, data, index) {
     const response = await fetch(url, {
-        method: 'POST',
+        method: 'POST', 
+        body: JSON.stringify({
+          itemid: index,
+          username: data[0],
+          comment: data[1],
+        }),      
         headers: {
           'Content-type': 'application/json',
           'Accept': 'application/json'
-        },
-        body: JSON.stringify(data)
+        },        
       });
     const res = await response.json();
     return res;
