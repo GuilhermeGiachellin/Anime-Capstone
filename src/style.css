@@ -14,8 +14,9 @@ button {
   margin-top: 15px;
   margin-right: 30px;
   padding: 5px 10px;
-  flex-basis: 1;
+  flex-basis: auto;
 }
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -39,7 +40,7 @@ button {
   width: 230px;
 }
 
-.interaction{
+.interaction {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -47,12 +48,10 @@ button {
 
 .like {
   padding-top: 15px;
-  flex-basis: 1;
-
+  flex-basis: auto;
 }
 
 .like i {
   font-size: 1.5em;
   color: #bdbdbd;
-
 }
