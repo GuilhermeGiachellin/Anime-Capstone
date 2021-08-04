@@ -37,5 +37,6 @@ export default function displayAnime(data) {
     container.appendChild(numberAnime);
     container.appendChild(domAnime);
   }
-
+  popUpAnime();
+  popUpEvent.popUpEvent();
 }

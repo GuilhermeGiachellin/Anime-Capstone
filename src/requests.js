@@ -1,5 +1,4 @@
 export default class request {
-
   async get(url) {
     const response = await fetch(url);
     const res = await response.json();
@@ -18,5 +17,4 @@ export default class request {
     const res = await response.json();
     return res;
   }
-  
 }
