@@ -1,6 +1,7 @@
 /* eslint-disable import/no-cycle */
 import popUpAnime from './popUp.js';
 import { newSession } from './calls.js';
+import refresher from './refresher.js';
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments';
 
@@ -19,6 +20,13 @@ export default class eventsPopUp {
     btn.addEventListener('click', () => {
       btn.parentNode.parentNode.innerHTML = '';
     });
+  }
+
+  static refresher(){
+    const likes = document.querySelectorAll('i');
+    likes.forEach(like => {
+      like.addEventListener('click',  refresher);
+    })
   }
 
   // Form listner

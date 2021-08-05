@@ -24,6 +24,7 @@ newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneA
   .then((response) => {
     displayLikes(response);
     eventsPopUp.popUpEvent();
+    eventsPopUp.refresher();
 
     const i = document.querySelectorAll('i');
     i.forEach((heart) => {
