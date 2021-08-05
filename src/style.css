@@ -115,6 +115,19 @@ footer p {
   justify-content: space-around;
 }
 
+.mark {
+  color: rgb(219, 72, 72);
+}
+
+.animLink {
+  text-decoration: none;
+  color: #272a31;
+  font-size: 1rem;
+}
+
+.animLink:hover {
+  color: rgb(219, 72, 72);
+}
 .domAnime {
   display: flex;
   flex-wrap: wrap;

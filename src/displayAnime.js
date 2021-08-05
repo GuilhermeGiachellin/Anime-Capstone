@@ -25,7 +25,7 @@ export default function displayAnime(data) {
 
     like.innerHTML = '<i class="fas fa-heart not_liked"></i>';
     button.innerHTML = 'Comment';
-    title.innerHTML = `${apiAnime[i].title}`;
+    title.innerHTML = `<a href="${apiAnime[i].url}" class="animLink">${apiAnime[i].title}</a>`;
     item.innerHTML += `<img src='${apiAnime[i].image_url}'/>`;
 
     interaction.appendChild(button);
