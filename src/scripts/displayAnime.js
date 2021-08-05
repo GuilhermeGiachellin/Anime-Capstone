@@ -1,14 +1,14 @@
 /* eslint-disable import/no-cycle */
 import { countAnime } from './countAnime.js';
 
-export default function displayAnime(data) {
-  const totalAnime = countAnime(data);
+export default async function displayAnime(data) {
+  const totalAnime = await countAnime(data);
   const container = document.querySelector('.container');
   const domAnime = document.createElement('div');
   const menu = document.querySelector('.show_num');
   menu.innerText += ` (${totalAnime})`;
   domAnime.classList.add('domAnime');
-  const apiAnime = data.anime;
+  const apiAnime = await data.anime;
 
   for (let i = 0; i < 9; i += 1) {
     const item = document.createElement('div');

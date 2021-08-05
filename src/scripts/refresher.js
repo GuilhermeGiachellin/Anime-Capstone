@@ -7,9 +7,7 @@ export default function refresher(e) {
   numLikes.forEach((num) => {
     const numTitle = num.parentElement.parentElement.previousSibling.innerHTML;
     if (num.innerHTML === e.target.nextSibling.innerHTML && numTitle === title) {
-      num.innerHTML = '';
       num.innerHTML = temp;
-      num.appendChild(num);
     }
   });
 }

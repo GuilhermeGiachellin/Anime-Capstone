@@ -126,7 +126,7 @@ footer p {
 }
 
 .animLink:hover {
-  color: rgb(219, 72, 72);
+  color: rgb(219, 72, 72) ;
 }
 .domAnime {
   display: flex;
