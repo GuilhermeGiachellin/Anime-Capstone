@@ -5,22 +5,17 @@ import displayAnime from './displayAnime.js';
 import displayLikes from './displayLikes.js';
 import saveLike from './saveLike.js';
 import countAnime from './countAnime.js';
-import popUpAnime from './popUp.js';
 
 export const newSession = new Request();
 
 // Get Top 9 Summer Anime From Jikan API
 newSession.get('https://api.jikan.moe/v3/season/2021/summer')
-  .then((data) => {
-    displayAnime(data);
-    countAnime(data);
-
-    const btns = document.querySelectorAll('button');
-    btns.forEach((btn) => {
-      btn.addEventListener('click', popUpAnime);
-    });
-  })
-  .catch((err) => err);
+.then(data => {
+  displayAnime(data);
+  countAnime(data);
+  
+})
+.catch(err => err);
 
 // Call Involvement API to display Likes
 newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/likes')
