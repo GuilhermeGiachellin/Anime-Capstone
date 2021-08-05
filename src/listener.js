@@ -4,7 +4,6 @@ import { newSession } from './calls.js';
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments';
 
-
 export default class eventsPopUp {
   // Open PopUp window
   static popUpEvent() {

@@ -8,7 +8,6 @@ import saveLike from './saveLike.js';
 import countAnime from './countAnime.js';
 import eventsPopUp from './listener';
 
-
 export const newSession = new Request();
 
 // Get Top 9 Summer Anime From Jikan API
@@ -16,11 +15,10 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
   .then((data) => {
     displayAnime(data);
     countAnime(data);
-    const btns = document.querySelectorAll('button');
-    btns.forEach((btn) => {
-      btn.addEventListener('click', popUpAnime);
-    });
-
+    // const btns = document.querySelectorAll('button');
+    // btns.forEach((btn) => {
+    //   btn.addEventListener('click', popUpAnime);
+    // });
   })
   .catch((err) => err);
 
@@ -41,4 +39,3 @@ newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneA
 // newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments')
 // .then(response => console.log(response))
 // .catch(err => err);
-

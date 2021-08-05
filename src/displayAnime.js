@@ -1,8 +1,6 @@
-
 /* eslint-disable import/no-cycle */
 import countAnime from './countAnime.js';
 import popUpEvent from './listener.js';
-import popUpAnime from './popUp.js';
 
 export default function displayAnime(data) {
   const totalAnime = countAnime(data);
