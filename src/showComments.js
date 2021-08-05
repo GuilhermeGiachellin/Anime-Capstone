@@ -1,3 +1,5 @@
+import { commentCounter } from './countAnime';
+
 export default async function showComments(index) {
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments?item_id=${index}`)
     .then((response) => response.json())
@@ -5,8 +7,9 @@ export default async function showComments(index) {
       const container = document.querySelector('.comments_container');
       const ul = document.createElement('ul');
       container.appendChild(ul);
-      console.log(json[0].creation_date);
-      for (let i = 0; i < json.length; i += 1) {
+      const allComment = commentCounter(json);
+
+      for (let i = 0; i < allComment; i += 1) {
         const li = document.createElement('li');
         const div = document.createElement('div');
         const user = document.createElement('h5');
@@ -18,6 +21,7 @@ export default async function showComments(index) {
         console.log(json[i].creation_date);
         comentario.innerHTML = `${json[i].comment}`;
 
+        li.classList.add('comment_li');
         div.classList.add('username_container');
         ul.classList.add('comment_ul');
         user.classList.add('username');
