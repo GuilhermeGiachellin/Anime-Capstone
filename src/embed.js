@@ -26,11 +26,11 @@ if (!false) {
             }
           }
 
-          const iframe = document.createElement('iframe');
-          iframe.setAttribute('frameborder', '0');
-          iframe.setAttribute('allowtransparency', 'true');
-          iframe.setAttribute('allowfullscreen', 'true');
-          iframe.setAttribute('scrolling', 'no');
+          var iframe = document.createElement('iframe');
+          iframe.setAttribute('frameborder','0');
+          iframe.setAttribute('allowtransparency','true');
+          iframe.setAttribute('allowfullscreen','true');
+          iframe.setAttribute('scrolling','yes');
           var root;
           if (e.hasAttribute('data-height')) {
             iframe.setAttribute('width', e.getAttribute('data-width'));

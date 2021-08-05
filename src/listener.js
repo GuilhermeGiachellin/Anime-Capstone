@@ -31,7 +31,7 @@ export default class eventsPopUp {
       const data = {
         item_id: index,
         username: input,
-        comment,
+        comment: comment
       };
       newSession.postComment(url, data);
       input = '';
