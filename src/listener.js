@@ -22,11 +22,11 @@ export default class eventsPopUp {
     });
   }
 
-  static refresher(){
+  static refresher() {
     const likes = document.querySelectorAll('i');
-    likes.forEach(like => {
-      like.addEventListener('click',  refresher);
-    })
+    likes.forEach((like) => {
+      like.addEventListener('click', refresher);
+    });
   }
 
   // Form listner
@@ -39,7 +39,7 @@ export default class eventsPopUp {
       const data = {
         item_id: index,
         username: input,
-        comment: comment
+        comment,
       };
       newSession.postComment(url, data);
       input = '';

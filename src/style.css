@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 button {
@@ -69,8 +69,8 @@ h1 {
 }
 
 footer {
-  background: rgb(84,126,224);
-  background: linear-gradient(315deg, rgba(84,126,224,1) 0%, rgba(84,180,224,1) 33%, rgba(28,197,220,1) 100%);;
+  background: rgb(84, 126, 224);
+  background: linear-gradient(315deg, rgba(84, 126, 224, 1) 0%, rgba(84, 180, 224, 1) 33%, rgba(28, 197, 220, 1) 100%);
   height: 10vh;
   margin-top: 100px;
   display: flex;
@@ -82,7 +82,8 @@ footer p {
   margin-top: 4vh;
   color: #fff;
 }
-#logo a{
+
+#logo a {
   float: left;
   font-weight: bolder;
   color: tomato;
@@ -117,7 +118,7 @@ footer p {
   border: 1px solid #e4e4e4;
   border-radius: 10px;
   background-color: #fff;
-  transition: .1s;
+  transition: 0.1s;
 }
 
 .item:hover {
