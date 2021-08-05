@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
 
 button {
@@ -14,6 +14,10 @@ button {
   margin-right: 30px;
   padding: 10px 10px;
   flex-basis: auto;
+}
+
+.like i {
+  font-size: 1.5em;
 }
 
 button:hover,
@@ -25,8 +29,8 @@ nav {
   display: flex;
   text-align: center;
   justify-content: center;
-  background: rgb(84,126,224);
-  background: linear-gradient(315deg, rgba(84,126,224,1) 0%, rgba(84,180,224,1) 33%, rgba(28,197,220,1) 100%);;
+  background: rgb(84, 126, 224);
+  background: linear-gradient(315deg, rgba(84, 126, 224, 1) 0%, rgba(84, 180, 224, 1) 33%, rgba(28, 197, 220, 1) 100%);
   min-height: 5vh;
 }
 
@@ -35,8 +39,14 @@ nav ul {
   list-style-type: none;
 }
 
+ul li {
+  list-style: none;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
 nav ul li {
-  margin-top: 0px;
+  margin-top: 0;
   padding: 10px;
 }
 
@@ -52,19 +62,20 @@ nav ul li a:hover {
 h1 {
   font-size: 3em;
   margin-bottom: 100px;
-  background-color: rgba(84,126,224,1);
+  background-color: rgba(84, 126, 224, 1);
   color: #fff;
   padding: 20px;
   border-radius: 10px;
 }
-#logo a{
+
+#logo a {
   float: left;
   font-weight: bolder;
   color: tomato;
 }
 
 .diagonal {
-  background-color: #eeeeee;
+  background-color: #eee;
   height: 10vh;
   position: relative;
   top: -50px;
@@ -108,7 +119,7 @@ h1 {
 }
 
 .item:hover {
-  box-shadow: 0 0 11px rgba(33,33,33,.2);
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
 .anime-title {
@@ -124,10 +135,6 @@ h1 {
 .like {
   padding-top: 15px;
   flex-basis: auto;
-}
-
-.like i {
-  font-size: 1.5em;
 }
 
 .not_liked {
@@ -190,12 +197,6 @@ h4 {
   justify-content: space-between;
   width: 25vw;
   margin: 0 auto;
-}
-
-ul li {
-  list-style: none;
-  font-size: 1.1rem;
-  margin-top: 10px;
 }
 
 form {

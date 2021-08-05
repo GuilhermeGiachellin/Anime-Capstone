@@ -28,7 +28,6 @@ export default class eventsPopUp {
       e.preventDefault();
       let input = document.querySelector('input').value;
       let comment = document.querySelector('textarea').value;
-      console.log(input);
       const data = {
         item_id: index,
         username: input,
@@ -38,7 +37,5 @@ export default class eventsPopUp {
       input = '';
       comment = '';
     });
-    // const input = document.querySelector('input');
-    // const comment = document.querySelector('textarea');
   }
 }
