@@ -29,7 +29,7 @@ if (!false) {
           iframe.setAttribute('frameborder','0');
           iframe.setAttribute('allowtransparency','true');
           iframe.setAttribute('allowfullscreen','true');
-          iframe.setAttribute('scrolling','no');
+          iframe.setAttribute('scrolling','yes');
           var root;
           if (e.hasAttribute('data-height')) {
             iframe.setAttribute('width',e.getAttribute('data-width'));

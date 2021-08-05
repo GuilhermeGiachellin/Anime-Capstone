@@ -30,7 +30,3 @@ newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneA
 })
 .catch(err => err);
 
-//GET FUNCIONANDO
-// newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments')
-// .then(response => console.log(response))
-// .catch(err => err);
