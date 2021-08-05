@@ -1,6 +1,7 @@
 /* eslint-disable import/no-cycle */
 import popUpAnime from './popUp.js';
 import { newSession } from './calls.js';
+import refresher from './refresher.js';
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments';
 
@@ -21,6 +22,13 @@ export default class eventsPopUp {
     });
   }
 
+  static refresher() {
+    const likes = document.querySelectorAll('i');
+    likes.forEach((like) => {
+      like.addEventListener('click', refresher);
+    });
+  }
+
   // Form listner
   static addComment(index) {
     const form = document.querySelector('form');
@@ -31,7 +39,7 @@ export default class eventsPopUp {
       const data = {
         item_id: index,
         username: input,
-        comment: comment
+        comment,
       };
       newSession.postComment(url, data);
       input = '';

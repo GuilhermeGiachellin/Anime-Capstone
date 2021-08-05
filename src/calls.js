@@ -15,7 +15,6 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
   .then((data) => {
     displayAnime(data);
     countAnime(data);
-
   })
   .catch((err) => err);
 
@@ -24,6 +23,7 @@ newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneA
   .then((response) => {
     displayLikes(response);
     eventsPopUp.popUpEvent();
+    eventsPopUp.refresher();
 
     const i = document.querySelectorAll('i');
     i.forEach((heart) => {
