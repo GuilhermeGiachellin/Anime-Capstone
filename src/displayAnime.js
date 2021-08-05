@@ -1,6 +1,6 @@
-import countAnime from "./countAnime.js";
-import popUpEvent from './listener';
-import popUpAnime from "./popUp.js";
+import countAnime from './countAnime.js';
+import popUpEvent from './listener.js';
+import popUpAnime from './popUp.js';
 
 export default function displayAnime(data) {
   const totalAnime = countAnime(data);
@@ -8,15 +8,17 @@ export default function displayAnime(data) {
   const domAnime = document.createElement('div');
   let menu = document.querySelector('.show_num');
   menu.innerText += ` (${totalAnime})`;
+  const numberAnime = document.createElement('h3');
+  numberAnime.innerText = totalAnime;
   domAnime.classList.add('domAnime');
-  let apiAnime = data.anime;
+  const apiAnime = data.anime;
 
-  for(let i = 0; i < 9 ; i++){
-    let item = document.createElement('div');
-    let button = document.createElement('button');
-    let like = document.createElement('div');
-    let interaction = document.createElement('div');
-    let title = document.createElement('h5');
+  for (let i = 0; i < 9; i += 1) {
+    const item = document.createElement('div');
+    const button = document.createElement('button');
+    const like = document.createElement('div');
+    const interaction = document.createElement('div');
+    const title = document.createElement('h5');
 
     like.classList.add('like');
     interaction.classList.add('interaction');
@@ -24,8 +26,8 @@ export default function displayAnime(data) {
     title.classList.add('anime-title');
     item.classList.add('item');
 
-    like.innerHTML = `<i class="fas fa-heart not_liked"></i>`;
-    button.innerHTML = `Comment`;
+    like.innerHTML = '<i class="fas fa-heart not_liked"></i>';
+    button.innerHTML = 'Comment';
     title.innerHTML = `${apiAnime[i].title}`;
     item.innerHTML += `<img src='${apiAnime[i].image_url}'/>`;
 
@@ -36,5 +38,6 @@ export default function displayAnime(data) {
     domAnime.appendChild(item);
     container.appendChild(domAnime);
   }
-
+  popUpAnime();
+  popUpEvent.popUpEvent();
 }

@@ -1,16 +1,18 @@
-import { newSession } from './calls.js';
+/* eslint-disable import/no-cycle */
+import Request from './requests.js';
+import eventsPopUp from './listener.js';
 
-export default function popUpAnime(e){
-    let index = e.target.parentNode.id;
+const popUp = new Request();
 
-newSession.get('https://api.jikan.moe/v3/season/2021/summer')
-.then(data => {
-    let apiAnime = data.anime;
-    let body = document.querySelector('.popup');
-    let container = document.createElement('div');
-    container.classList.add('popup_container')
-    container.innerHTML = `
-    <i class="fas fa-times"></i>
+export default function popUpAnime(index) {
+  popUp.get('https://api.jikan.moe/v3/season/2021/summer')
+    .then((data) => {
+      const apiAnime = data.anime;
+      const body = document.querySelector('.popup');
+      const container = document.createElement('div');
+      container.classList.add('popup_container');
+      container.innerHTML = `
+    <i class="fas fa-times" id="close_popup"></i>
     <img src="${apiAnime[index].image_url}">
     <h4>${apiAnime[index].title}</h4>
     <div class="info_container">
@@ -28,8 +30,9 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
     <input type="text" placeholder="Name" id="name" required>
     <textarea name="comment" placeholder="Write your comment here" required maxlength="500"></textarea>    
         <input type="submit" value="Comment" id="submit_btn" class="submit_btn"></input>    
-    </form>`        
-                          
-    body.appendChild(container)
-})
+    </form>`;
+
+      body.appendChild(container);
+      eventsPopUp.closePopUp();
+    });
 }
