@@ -184,7 +184,7 @@ footer p {
   flex-direction: column;
   height: 90vh;
   width: 50vw;
-  margin: 5vh 32.5vw;
+  margin: 5vh auto;
   background-color: #272a31;
   color: white;
   border-radius: 8px;

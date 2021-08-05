@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { countAnime } from '../countAnime.js';
-import Request from '../requests.js';
+import { countAnime } from '../scripts/countAnime.js';
+import Request from '../scripts/requests.js';
 
 test('Test Count Number function if returning exact number ', () => {
   const req = new Request();

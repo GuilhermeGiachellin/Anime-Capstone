@@ -30,7 +30,7 @@ export default class eventsPopUp {
         btn.parentNode.parentNode.innerHTML = '';
         const container = document.querySelector('.popup');
         container.style = '';
-      }, 500);
+      }, 450);
     });
   }
 
