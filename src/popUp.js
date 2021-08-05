@@ -1,11 +1,13 @@
 /* eslint-disable import/no-cycle */
-import Request from './requests.js';
+
 import eventsPopUp from './listener.js';
+import showComments from './showComments.js';
+import { newSession } from './calls.js';
 
-const popUp = new Request();
+export default function popUpAnime(e) {
+  const index = e.target.parentNode.id;
+  newSession.get('https://api.jikan.moe/v3/season/2021/summer')
 
-export default function popUpAnime(index) {
-  popUp.get('https://api.jikan.moe/v3/season/2021/summer')
     .then((data) => {
       const apiAnime = data.anime;
       const body = document.querySelector('.popup');
@@ -25,14 +27,18 @@ export default function popUpAnime(index) {
     <li>Genres: ${apiAnime[index].genres[0].name}, ${apiAnime[index].genres[1].name}</li>
     </ul>    
     </div>
-    <form>
-    <h5>Add a comment</h5>
+    <h4 class="comment_title">Comments (): </h4>
+    <div class="comments_container"></div>
+    <h4 class="comment_title">Add a comment:</h4>
+    <form>    
     <input type="text" placeholder="Name" id="name" required>
     <textarea name="comment" placeholder="Write your comment here" required maxlength="500"></textarea>    
         <input type="submit" value="Comment" id="submit_btn" class="submit_btn"></input>    
     </form>`;
 
       body.appendChild(container);
+      eventsPopUp.addComment(index);
+      showComments(index);
       eventsPopUp.closePopUp();
     });
 }
