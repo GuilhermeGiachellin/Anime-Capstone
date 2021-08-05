@@ -18,7 +18,6 @@ export default class Request {
       body: JSON.stringify(data),
     });
     const res = await response.json();
-    console.log(res);
     return res;
   }
 
