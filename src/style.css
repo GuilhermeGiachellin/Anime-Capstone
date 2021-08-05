@@ -5,6 +5,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+  background-color: #eeeeee;
+}
+
 button {
   margin-top: 15px;
   margin-right: 30px;
@@ -82,21 +86,11 @@ footer p {
   transform: rotate(2deg);
 }
 
-.illustration {
-  height: 50vh;
-  background-image: url('./ill2.jpeg');
-  background-size: cover;
-  background-position-y: -100px;
-  background-repeat: no-repeat;
-  background-color: #4b5488;
-}
-
 .container {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  background-color: #e4e4e4;
   justify-content: space-around;
 }
 

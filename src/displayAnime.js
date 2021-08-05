@@ -8,8 +8,6 @@ export default function displayAnime(data) {
   const domAnime = document.createElement('div');
   let menu = document.querySelector('.show_num');
   menu.innerText += ` (${totalAnime})`;
-  const numberAnime = document.createElement('h3');
-  numberAnime.innerText = totalAnime;
   domAnime.classList.add('domAnime');
   const apiAnime = data.anime;
 
@@ -36,7 +34,6 @@ export default function displayAnime(data) {
     item.appendChild(title);
     item.appendChild(interaction);
     domAnime.appendChild(item);
-    container.appendChild(numberAnime);
     container.appendChild(domAnime);
   }
   popUpEvent.popUpEvent();
