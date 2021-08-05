@@ -10,7 +10,7 @@ export default class eventsPopUp {
   static popUpEvent() {
     const btns = document.querySelectorAll('button');
     btns.forEach((btn) => {
-      btn.addEventListener('click', (e) => {        
+      btn.addEventListener('click', (e) => {
         const container = document.querySelector('.popup');
         container.style = 'height: 100vh; width: 100vw;';
         popUpAnime(e);
@@ -24,11 +24,11 @@ export default class eventsPopUp {
     btn.addEventListener('click', () => {
       const animation = document.querySelector('.popup_container');
       animation.style = 'animation: close_popup_animation 0.5s';
-      setTimeout(()=>{
+      setTimeout(() => {
         btn.parentNode.parentNode.innerHTML = '';
         const container = document.querySelector('.popup');
-        container.style = '';   
-      },500);   
+        container.style = '';
+      }, 500);
     });
   }
 

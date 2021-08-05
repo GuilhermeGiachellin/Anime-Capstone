@@ -10,9 +10,9 @@ export default async function showComments(index) {
       container.innerHTML = '';
       container.appendChild(ul);
       const allComment = commentCounter(json);
-      if(allComment > 0) {
-      const title = document.querySelector('.comment_title');
-      title.innerHTML = `Comments (${allComment})`;
+      if (allComment > 0) {
+        const title = document.querySelector('.comment_title');
+        title.innerHTML = `Comments (${allComment})`;
       }
       for (let i = 0; i < allComment; i += 1) {
         const li = document.createElement('li');
@@ -20,7 +20,7 @@ export default async function showComments(index) {
         const user = document.createElement('h5');
         const date = document.createElement('h5');
         const comentario = document.createElement('p');
-       
+
         user.innerHTML = `${json[i].username}`;
         date.innerHTML = `${json[i].creation_date}`;
         comentario.innerHTML = `${json[i].comment}`;
