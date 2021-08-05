@@ -1,12 +1,12 @@
-import request from './requests';
+/* eslint-disable import/no-cycle */
+/* eslint-disable import/prefer-default-export */
+import Request from './requests.js';
 import displayAnime from './displayAnime.js';
 import displayLikes from './displayLikes.js';
 import saveLike from './saveLike.js';
 import countAnime from './countAnime.js';
-import popUpAnime from './popUp.js';
-import eventsPopUp from './listener';
 
-export const newSession = new request();
+export const newSession = new Request();
 
 // Get Top 9 Summer Anime From Jikan API
 newSession.get('https://api.jikan.moe/v3/season/2021/summer')
@@ -19,14 +19,12 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
 
 // Call Involvement API to display Likes
 newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/likes')
-.then(response => {
-  displayLikes(response);
+  .then((response) => {
+    displayLikes(response);
 
-  eventsPopUp.popUpEvent();
-  const i =  document.querySelectorAll('i');
-  i.forEach(heart => {
-  heart.addEventListener('click', saveLike);
-  });
-})
-.catch(err => err);
-
+    const i = document.querySelectorAll('i');
+    i.forEach((heart) => {
+      heart.addEventListener('click', saveLike);
+    });
+  })
+  .catch((err) => err);

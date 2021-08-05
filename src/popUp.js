@@ -5,7 +5,7 @@ export default function popUpAnime(e) {
   let index = e.target.parentNode.id;
   newSession.get('https://api.jikan.moe/v3/season/2021/summer')
     .then((data) => {
-      const apiAnime = data.anime;      
+      const apiAnime = data.anime;
       const body = document.querySelector('.popup');
       const container = document.createElement('div');
       container.classList.add('popup_container');
