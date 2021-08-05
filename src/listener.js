@@ -2,6 +2,8 @@
 import popUpAnime from './popUp.js';
 import { newSession } from './calls.js';
 import showComments from './showComments.js';
+import refresher from './refresher.js';
+
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments';
 
@@ -29,6 +31,13 @@ export default class eventsPopUp {
         const container = document.querySelector('.popup');
         container.style = '';
       }, 500);
+    });
+  }
+
+  static refresher() {
+    const likes = document.querySelectorAll('i');
+    likes.forEach((like) => {
+      like.addEventListener('click', refresher);
     });
   }
 
