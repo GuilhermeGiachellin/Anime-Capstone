@@ -1,4 +1,5 @@
-import countAnime from './countAnime.js';
+/* eslint-disable import/no-cycle */
+import { countAnime } from './countAnime.js';
 import popUpEvent from './listener.js';
 
 export default function displayAnime(data) {
@@ -35,6 +36,7 @@ export default function displayAnime(data) {
     item.appendChild(title);
     item.appendChild(interaction);
     domAnime.appendChild(item);
+    container.appendChild(numberAnime);
     container.appendChild(domAnime);
   }
   popUpEvent.popUpEvent();
