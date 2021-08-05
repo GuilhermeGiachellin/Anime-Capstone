@@ -1,11 +1,13 @@
 /* eslint-disable import/no-cycle */
 /* eslint-disable import/prefer-default-export */
-import Request from './requests';
+
+import Request from './requests.js';
 import displayAnime from './displayAnime.js';
 import displayLikes from './displayLikes.js';
 import saveLike from './saveLike.js';
 import countAnime from './countAnime.js';
 import eventsPopUp from './listener';
+
 
 export const newSession = new Request();
 
@@ -14,6 +16,11 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
   .then((data) => {
     displayAnime(data);
     countAnime(data);
+    const btns = document.querySelectorAll('button');
+    btns.forEach((btn) => {
+      btn.addEventListener('click', popUpAnime);
+    });
+
   })
   .catch((err) => err);
 
@@ -21,8 +28,8 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
 newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/likes')
   .then((response) => {
     displayLikes(response);
-
     eventsPopUp.popUpEvent();
+
     const i = document.querySelectorAll('i');
     i.forEach((heart) => {
       heart.addEventListener('click', saveLike);
@@ -34,3 +41,4 @@ newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneA
 // newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments')
 // .then(response => console.log(response))
 // .catch(err => err);
+

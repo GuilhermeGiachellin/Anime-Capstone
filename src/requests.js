@@ -1,4 +1,4 @@
-export default class request {
+export default class Request {
   async get(url) {
     this.url = url;
     const response = await fetch(url);
