@@ -6,7 +6,7 @@ import displayAnime from './displayAnime.js';
 import displayLikes from './displayLikes.js';
 import saveLike from './saveLike.js';
 import { countAnime } from './countAnime.js';
-import eventsPopUp from './listener';
+import eventsPopUp from './listener.js';
 
 export const newSession = new Request();
 

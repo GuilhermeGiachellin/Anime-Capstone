@@ -6,7 +6,7 @@ export default function displayAnime(data) {
   const totalAnime = countAnime(data);
   const container = document.querySelector('.container');
   const domAnime = document.createElement('div');
-  let menu = document.querySelector('.show_num');
+  const menu = document.querySelector('.show_num');
   menu.innerText += ` (${totalAnime})`;
   const numberAnime = document.createElement('h3');
   numberAnime.innerText = totalAnime;

@@ -1,4 +1,4 @@
-import { commentCounter } from './countAnime';
+import { commentCounter } from './countAnime.js';
 
 export default async function showComments(index) {
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments?item_id=${index}`)
@@ -18,7 +18,6 @@ export default async function showComments(index) {
 
         user.innerHTML = `${json[i].username}`;
         date.innerHTML = `${json[i].creation_date}`;
-        console.log(json[i].creation_date);
         comentario.innerHTML = `${json[i].comment}`;
 
         li.classList.add('comment_li');
