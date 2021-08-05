@@ -10,8 +10,10 @@ export default function popUpAnime(e) {
     .then((data) => {
       const apiAnime = data.anime;
       const body = document.querySelector('.popup');
+      const background = document.createElement('div');
       const container = document.createElement('div');
-      container.classList.add('popup_container');
+      background.classList.add('background');
+      container.classList.add('popup_container');      
       container.innerHTML = `
     <i class="fas fa-times" id="close_popup"></i>
     <img src="${apiAnime[index].image_url}">
@@ -26,7 +28,7 @@ export default function popUpAnime(e) {
     <li>Genres: ${apiAnime[index].genres[0].name}, ${apiAnime[index].genres[1].name}</li>
     </ul>    
     </div>
-    <h4 class="comment_title">Comments (): </h4>
+    <h4 class="comment_title">Comments (0): </h4>
     <div class="comments_container"></div>
     <h4 class="comment_title">Add a comment:</h4>
     <form>    
@@ -35,6 +37,7 @@ export default function popUpAnime(e) {
         <input type="submit" value="Comment" id="submit_btn" class="submit_btn"></input>    
     </form>`;
 
+      body.appendChild(background);
       body.appendChild(container);
       eventsPopUp.addComment(index);
       showComments(index);

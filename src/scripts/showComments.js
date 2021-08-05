@@ -1,14 +1,19 @@
 import { commentCounter } from './countAnime.js';
 
 export default async function showComments(index) {
+  console.log('showcomments');
   await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments?item_id=${index}`)
     .then((response) => response.json())
     .then((json) => {
       const container = document.querySelector('.comments_container');
       const ul = document.createElement('ul');
+      container.innerHTML = '';
       container.appendChild(ul);
       const allComment = commentCounter(json);
-
+      if (allComment > 0) {
+        const title = document.querySelector('.comment_title');
+        title.innerHTML = `Comments (${allComment})`;
+      }
       for (let i = 0; i < allComment; i += 1) {
         const li = document.createElement('li');
         const div = document.createElement('div');

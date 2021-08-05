@@ -1,6 +1,6 @@
 import { expect, test } from '@jest/globals';
-import { countAnime } from '../countAnime.js';
-import Request from '../requests.js';
+import { countAnime } from '../scripts/countAnime.js';
+import Request from '../scripts/requests.js';
 
 test('Test Count Number function if returning exact number ', () => {
   const req = new Request();
@@ -10,3 +10,8 @@ test('Test Count Number function if returning exact number ', () => {
     })
     .catch((err) => err);
 });
+
+// test('Test Count Number of comments and test if it is being printed correctly'), () => {
+//   const req = new Request();
+//   req.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments')
+// }
