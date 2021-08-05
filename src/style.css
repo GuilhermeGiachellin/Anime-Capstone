@@ -14,10 +14,18 @@ button {
   margin-right: 30px;
   padding: 10px 10px;
   flex-basis: auto;
+  background-color: rgba(84, 126, 224, 1);
+  border: 1px solid rgba(84, 126, 224, 1);
+  color: #fff;
+  transition: 0.3s;
 }
 
 .like i {
   font-size: 1.5em;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px rgba(84, 126, 224, 1);
 }
 
 button:hover,
