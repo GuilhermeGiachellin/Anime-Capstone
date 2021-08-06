@@ -223,6 +223,7 @@ form {
 }
 
 .submit_btn {
+  padding: 0;
   width: 6vw;
   height: 4vh;
   align-items: center;
@@ -230,16 +231,19 @@ form {
 
 .submit_btn:hover {
   cursor: pointer;
+  background-color: #bdbdbd;
+  transition: 0.5s;
 }
 
-input,
-textarea {
+input {
+  padding-left: 10px;
   width: 20vw;
-  height: 3.5vh;
+  height: 4vh;
   margin: 10px auto;
 }
 
-textarea:focus {
+textarea {
+  padding: 10px;
   width: 20vw;
   height: 10vh;
   transition: 0.5s;
@@ -267,6 +271,11 @@ textarea:focus {
   color: #272a31;
   background-color: #e4e4e4;
   border: 1px solid black;
+}
+
+.comment_li:hover {
+  background-color: #bdbdbd;
+  transition: 0.5s;
 }
 
 .comment_ul > li > p {
@@ -341,19 +350,20 @@ textarea:focus {
     width: 80vw;
   }
 
-  input,
-  textarea {
+  input {
+    padding-right: 10px;
     width: 80vw;
     height: 40px;
   }
 
-  textarea:focus {
-    transition: 0.5s;
+  textarea {
+    padding: 10px;
     width: 80vw;
     height: 120px;
   }
 
   .submit_btn {
+    padding: 0;
     width: 30vw;
     height: 60px;
   }
