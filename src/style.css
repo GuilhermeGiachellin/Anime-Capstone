@@ -126,8 +126,9 @@ footer p {
 }
 
 .animLink:hover {
-  color: rgb(219, 72, 72) ;
+  color: rgb(219, 72, 72);
 }
+
 .domAnime {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +140,7 @@ footer p {
   padding: 20px 30px;
   border: 1px solid #e4e4e4;
   border-radius: 10px;
-  background-color:#fff;
+  background-color: #fff;
   transition: 0.1s;
 }
 
