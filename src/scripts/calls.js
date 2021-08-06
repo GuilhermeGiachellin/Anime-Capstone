@@ -13,7 +13,6 @@ export const newSession = new Request();
 // Get Top 9 Summer Anime From Jikan API
 newSession.get('https://api.jikan.moe/v3/season/2021/summer')
   .then((data) => {
-    console.log(data);
     displayAnime(data);
     countAnime(data);
   })
