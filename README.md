@@ -11,7 +11,7 @@
 ![image](https://user-images.githubusercontent.com/81584449/128547023-71913220-8e56-4fd1-94bb-8f0f47c953f3.png)
 
 ##  Live Demo
-[Demo](https://guilhermegiachellin.github.io/Leaderboard/)
+[Demo](https://guilhermegiachellin.github.io/Anime-Capstone/)
 
 ## What was built in this project:
 
