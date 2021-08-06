@@ -1,8 +1,13 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { expect, test } from '@jest/globals';
 import { countAnime /* commentCounter */ } from '../scripts/countAnime.js';
 import Request from '../scripts/requests.js';
+import displayAnime from '../scripts/displayAnime.js';
 
-test('Test Count Number function if returning exact number ', () => {
+test('Test Count Number function if returning exact number ',() =>{
   const req = new Request();
   req.get('https://api.jikan.moe/v3/season/2021/summer')
     .then((res) => {
@@ -10,6 +15,7 @@ test('Test Count Number function if returning exact number ', () => {
     })
     .catch((err) => err);
 });
+
 
 // test('Test Count Number of comments and test if it is being printed correctly', () => {
 //   const req = new Request();
@@ -22,3 +28,19 @@ test('Test Count Number function if returning exact number ', () => {
 //     index += 1;
 //   }
 // });
+
+test('Test Count Number of comments and test if it is being printed correctly', async () => {
+  const req = new Request();
+  document.body.innerHTML = '<div class="container"></div>';
+  const items;
+  req.get('https://api.jikan.moe/v3/season/2021/summer')
+    .then((res) => {
+      displayAnime(res);
+      items = document.querySelectorAll('.item');
+      console.log(items);
+      expect(items.length).toEqual(9);
+    })
+    .catch((err) => err);
+  console.log(items)
+});
+
