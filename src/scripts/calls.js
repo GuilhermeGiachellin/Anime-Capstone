@@ -14,7 +14,7 @@ newSession.get('https://api.jikan.moe/v3/season/2021/summer')
   .then((data) => {
     displayAnime(data);
     countAnime(data);
-      
+
     // Call Involvement API to display Likes
     newSession.get('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/likes')
       .then((response) => {

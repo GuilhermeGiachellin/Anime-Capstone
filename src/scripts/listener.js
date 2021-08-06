@@ -34,7 +34,7 @@ export default class eventsPopUp {
     });
   }
 
-  //Save like
+  // Save like
   static setLike() {
     const i = document.querySelectorAll('i');
     i.forEach((heart) => {
@@ -42,7 +42,7 @@ export default class eventsPopUp {
     });
   }
 
-  //Refresh like
+  // Refresh like
   static refresher() {
     const likes = document.querySelectorAll('i');
     likes.forEach((like) => {
