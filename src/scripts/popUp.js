@@ -39,9 +39,9 @@ export default function popUpAnime(e) {
 
       body.appendChild(background);
       body.appendChild(container);
-     
+
       showComments(index);
-      eventsPopUp.addComment(index);      
+      eventsPopUp.addComment(index);
       eventsPopUp.closePopUp();
     });
 }
