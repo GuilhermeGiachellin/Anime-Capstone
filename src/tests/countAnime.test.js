@@ -3,40 +3,52 @@
  */
 
 import { expect, test } from '@jest/globals';
-import { countAnime /* commentCounter */ } from '../scripts/countAnime.js';
-import Request from '../scripts/requests.js';
-import displayAnime from '../scripts/displayAnime.js';
+import { commentCounter, countAnime } from '../scripts/countAnime.js';
 
-test('Test Count Number function if returning exact number ', () => {
-  const req = new Request();
-  req.get('https://api.jikan.moe/v3/season/2021/summer')
-    .then((res) => {
-      expect(countAnime(res)).toEqual(181);
-    })
-    .catch((err) => err);
+test('Test the comments counter', () => {
+  const commentTest = [
+    {
+      item_id: '1',
+      username: 'test1',
+      comment: 'testcomment',
+    },
+    {
+      item_id: '2',
+      username: 'test2',
+      comment: 'test2',
+    },
+    {
+      item_id: '3',
+      username: 'test3',
+      comment: 'test3',
+    },
+  ];
+  const count = commentCounter(commentTest);  
+  expect(count).toBe(3);
+})
+
+test('Test Count Number function if returning exact number ',() =>{
+  const obj = 
+    {
+      anime: [
+          {
+            item_id: "item1",
+            usename: "Alex",
+            comment: "Hey"
+          },
+          {
+            item_id: "item2",
+            usename: "Guil",
+            comment: "Holla"
+          },
+          {
+            item_id: "item3",
+            usename: "Anvi",
+            comment: "Yo"
+          },
+      ]
+    };
+  const count = countAnime(obj);
+  expect(count).toBe(3);
 });
 
-// test('Test Count Number of comments and test if it is being printed correctly', () => {
-//   const req = new Request();
-//   for (let i = 0; i < req.length; i += 1) {
-//     let index = 0;
-//     req.get(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments?item_id=${index}`)
-//       .then((res) => {
-//         expect(commentCounter(res)).toEqual(res.length);
-//       });
-//     index += 1;
-//   }
-// });
-
-test('Test Count Number of comments and test if it is being printed correctly', async () => {
-  const req = new Request();
-  document.body.innerHTML = '<div class="container"></div>';
-
-  req.get('https://api.jikan.moe/v3/season/2021/summer')
-    .then((res) => {
-      displayAnime(res);
-      const items = document.querySelectorAll('.item');
-      expect(items.length).toEqual(9);
-    })
-    .catch((err) => err);
-});

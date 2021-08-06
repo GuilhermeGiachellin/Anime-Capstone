@@ -5,7 +5,7 @@ export default async function displayAnime(data) {
   const totalAnime = await countAnime(data);
   const container = document.querySelector('.container');
   const domAnime = document.createElement('div');
-  const menu = document.querySelector('.show_num');
+  const menu = document.querySelector('.show_num');  
   menu.innerText += ` (${totalAnime})`;
   domAnime.classList.add('domAnime');
   const apiAnime = await data.anime;
@@ -35,4 +35,7 @@ export default async function displayAnime(data) {
     domAnime.appendChild(item);
     container.appendChild(domAnime);
   }
+  const items = [...document.querySelectorAll('.item')];
+  console.log(items.length)
+  return items;
 }

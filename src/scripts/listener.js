@@ -3,6 +3,7 @@ import popUpAnime from './popUp.js';
 import { newSession } from './calls.js';
 import showComments from './showComments.js';
 import refresher from './refresher.js';
+import saveLike from './saveLike.js';
 
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments';
 
@@ -33,6 +34,15 @@ export default class eventsPopUp {
     });
   }
 
+  //Save like
+  static setLike() {
+    const i = document.querySelectorAll('i');
+    i.forEach((heart) => {
+      heart.addEventListener('click', saveLike);
+    });
+  }
+
+  //Refresh like
   static refresher() {
     const likes = document.querySelectorAll('i');
     likes.forEach((like) => {
