@@ -11,7 +11,11 @@
 ![image](https://user-images.githubusercontent.com/81584449/128547023-71913220-8e56-4fd1-94bb-8f0f47c953f3.png)
 
 ##  Live Demo
-[Demo](https://guilhermegiachellin.github.io/Anime-Capstone/)
+- [Demo](https://guilhermegiachellin.github.io/Anime-Capstone/)
+
+## See a video about the project!
+
+- [Video](https://www.loom.com/share/627ff0c7e3ed4029bc50b9e477075549)
 
 ## What was built in this project:
 
