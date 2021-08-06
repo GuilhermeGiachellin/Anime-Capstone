@@ -29,10 +29,9 @@ export default class Request {
       body: JSON.stringify(data),
       headers: {
         'Content-type': 'application/json',
-        Accept: 'application/json',
       },
     });
-    const res = await response;
+    const res = response;
     return res;
   }
 }

@@ -4,7 +4,6 @@ import { newSession } from './calls.js';
 import showComments from './showComments.js';
 import refresher from './refresher.js';
 
-
 const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/S7zVMxWAOezBiRHSLLWC/comments';
 
 export default class eventsPopUp {
@@ -56,7 +55,9 @@ export default class eventsPopUp {
       newSession.postComment(url, data);
       document.querySelector('input').value = '';
       document.querySelector('textarea').value = '';
-      showComments(index);
+      setTimeout(() => {
+        showComments(index);
+      }, 500);
     });
   }
 }
