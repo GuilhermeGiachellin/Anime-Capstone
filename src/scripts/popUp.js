@@ -13,7 +13,7 @@ export default function popUpAnime(e) {
       const background = document.createElement('div');
       const container = document.createElement('div');
       background.classList.add('background');
-      container.classList.add('popup_container');      
+      container.classList.add('popup_container');
       container.innerHTML = `
     <i class="fas fa-times" id="close_popup"></i>
     <img src="${apiAnime[index].image_url}">
@@ -39,8 +39,9 @@ export default function popUpAnime(e) {
 
       body.appendChild(background);
       body.appendChild(container);
-      eventsPopUp.addComment(index);
+     
       showComments(index);
+      eventsPopUp.addComment(index);      
       eventsPopUp.closePopUp();
     });
 }
